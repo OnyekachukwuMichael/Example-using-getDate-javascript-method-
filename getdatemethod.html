@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo">Example to demonstrate getDate method in Javascript</p>
+  
+  <script>
+    let currentDate = new Date();
+    
+    function displayDate(methodName, result){
+      const resultDiv = document.createElement('div');
+      resultDiv.innerHTML = `${methodName} : ${result}`;
+      document.body.appendChild(resultDiv);
+    }
+    
+    displayDate("getFullYear", currentDate.getFullYear());
+    displayDate("getMonth ", currentDate.getMonth());
+    displayDate("getDate ", currentDate.getDate());
+    displayDate("getDay ", currentDate.getDay());
+    displayDate("getHours", currentDate.getHours());
+    displayDate("getMinutes", currentDate.getMinutes());
+    displayDate("getSeconds", currentDate.getSeconds());
+    displayDate("getMilliseconds", currentDate.getMilliseconds());
+    
+    displayDate("<br> getUTCFullYear", currentDate.getUTCFullYear());
+    displayDate("getUTCMonth", currentDate.getUTCMonth());
+    displayDate("getUTCDate", currentDate.getUTCDate());
+    displayDate("getUTCDay", currentDate.getUTCDay());
+    displayDate("getUTCSeconds", currentDate.getUTCSeconds());
+    displayDate("getUTCMinutes", currentDate.getUTCMinutes());
+    displayDate("getUTCHours", currentDate.getUTCHours());
+    displayDate("getUTCMilliseconds", currentDate.getUTCMilliseconds());
+    
+    let theEnd = document.createElement("p");
+    theEnd.innerHTML = "<br><br> The End".toUpperCase();
+    theEnd.style.fontWeight = "bold";
+    document.body.appendChild(theEnd);
+    
+    let demo = document.getElementById("demo");
+    demo.textContent = demo.textContent.toUpperCase();
+    demo.style.fontWeight = "bold";
+    demo.style.textDecoration = "underline";
+    demo.style.color = "purple";
+    
+  </script>
+  
+</body>
+</html>
